@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Список контейнеров",
+  "name": "IISPrСписокКонтейE",
+  "className": "СписокКонтейE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-список-контей",
+      "modelProjection": "СписокКонтейE"
+    }
+  ]
+}

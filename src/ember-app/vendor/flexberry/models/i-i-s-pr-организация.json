@@ -1,0 +1,106 @@
+﻿{
+  "name": "IISPrОрганизация",
+  "modelName": "i-i-s-pr-организация",
+  "className": "Организация",
+  "nameSpace": "IIS.Pr",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "наимОрганиз",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-pr-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОрганизацияE",
+      "modelName": "i-i-s-pr-организация",
+      "attrs": [
+        {
+          "name": "наимОрганиз",
+          "caption": "Наименование организации",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИОСотруд",
+          "lookupValueField": "фИОСотруд",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "фИОСотруд",
+              "caption": "ФИО сотрудника",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "ФИО сотрудника",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-pr-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ОрганизацияL",
+      "modelName": "i-i-s-pr-организация",
+      "attrs": [
+        {
+          "name": "наимОрганиз",
+          "caption": "Наименование организации",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "фИОСотруд",
+              "caption": "ФИО сотрудника",
+              "hidden": true,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО сотрудника",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-pr-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

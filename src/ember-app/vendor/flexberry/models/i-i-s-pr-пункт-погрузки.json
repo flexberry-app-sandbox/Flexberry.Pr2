@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISPrПунктПогрузки",
+  "modelName": "i-i-s-pr-пункт-погрузки",
+  "className": "ПунктПогрузки",
+  "nameSpace": "IIS.Pr",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "адрес",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наимПункта",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПунктПогрузкиE",
+      "modelName": "i-i-s-pr-пункт-погрузки",
+      "attrs": [
+        {
+          "name": "адрес",
+          "caption": "Адрес погрузки",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наимПункта",
+          "caption": "Наименование пункта",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ПунктПогрузкиL",
+      "modelName": "i-i-s-pr-пункт-погрузки",
+      "attrs": [
+        {
+          "name": "адрес",
+          "caption": "Адрес погрузки",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наимПункта",
+          "caption": "Наименование пункта",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

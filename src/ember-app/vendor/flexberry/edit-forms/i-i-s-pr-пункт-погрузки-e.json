@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Пункт погрузки",
+  "name": "IISPrПунктПогрузкиE",
+  "className": "ПунктПогрузкиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-пункт-погрузки",
+      "modelProjection": "ПунктПогрузкиE"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISPrСотрудники",
+  "modelName": "i-i-s-pr-сотрудники",
+  "className": "Сотрудники",
+  "nameSpace": "IIS.Pr",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "фИОСотруд",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СотрудникиE",
+      "modelName": "i-i-s-pr-сотрудники",
+      "attrs": [
+        {
+          "name": "фИОСотруд",
+          "caption": "ФИО сотрудника",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "СотрудникиL",
+      "modelName": "i-i-s-pr-сотрудники",
+      "attrs": [
+        {
+          "name": "фИОСотруд",
+          "caption": "ФИО сотрудника",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

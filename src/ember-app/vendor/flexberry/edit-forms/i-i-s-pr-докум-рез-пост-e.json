@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "ДокумРаспр",
+      "projection": "ДокумРаспрL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Документ результатов поставки",
+  "name": "IISPrДокумРезПостE",
+  "className": "ДокумРезПостE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-докум-рез-пост",
+      "modelProjection": "ДокумРезПостE"
+    }
+  ]
+}

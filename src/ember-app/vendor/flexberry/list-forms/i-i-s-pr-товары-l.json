@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pr-товары-e",
+  "editForm": "i-i-s-pr-товары-e",
+  "external": false,
+  "caption": "Товары",
+  "name": "IISPrТоварыL",
+  "className": "ТоварыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-товары",
+      "modelProjection": "ТоварыL"
+    }
+  ]
+}

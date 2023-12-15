@@ -1,0 +1,77 @@
+<h3 class="ui header">{{t "forms.i-i-s-pr-товары-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.наимТовара
+      class=(if (v-get validationModel "наимТовара" "isInvalid") "error")
+      label=(t "forms.i-i-s-pr-товары-e.наимТовара-caption")
+      data-test-i-i-s-pr-товары-e-наимТовара=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "наимТовара" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.производитель
+      class=(if (v-get validationModel "производитель" "isInvalid") "error")
+      label=(t "forms.i-i-s-pr-товары-e.производитель-caption")
+      data-test-i-i-s-pr-товары-e-производитель=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "производитель" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-pr-товары-e-единицыИзмер="true">
+    <label>{{t "forms.i-i-s-pr-товары-e.единицыИзмер-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-pr-ед-изм")
+      value=model.единицыИзмер
+      class=(if (v-get validationModel "единицыИзмер" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "единицыИзмер" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.цена
+      class=(if (v-get validationModel "цена" "isInvalid") "error")
+      label=(t "forms.i-i-s-pr-товары-e.цена-caption")
+      data-test-i-i-s-pr-товары-e-цена=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "цена" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.масса
+      class=(if (v-get validationModel "масса" "isInvalid") "error")
+      label=(t "forms.i-i-s-pr-товары-e.масса-caption")
+      data-test-i-i-s-pr-товары-e-масса=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "масса" "message")}}
+  </div>
+</form>

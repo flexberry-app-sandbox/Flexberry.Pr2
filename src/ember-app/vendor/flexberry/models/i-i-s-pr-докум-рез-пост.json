@@ -1,0 +1,211 @@
+﻿{
+  "name": "IISPrДокумРезПост",
+  "modelName": "i-i-s-pr-докум-рез-пост",
+  "className": "ДокумРезПост",
+  "nameSpace": "IIS.Pr",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наличиеДеф",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "статусЗаказа",
+      "type": "i-i-s-pr-состоян-заказа",
+      "flexberryType": "СостоянЗаказа",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "удовлКл",
+      "type": "i-i-s-pr-уд-кл",
+      "flexberryType": "УдКл",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "докумРаспр",
+      "relatedTo": "i-i-s-pr-докум-распр",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДокумРезПостE",
+      "modelName": "i-i-s-pr-докум-рез-пост",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "статусЗаказа",
+          "caption": "Статус заказа",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "наличиеДеф",
+          "caption": "Наличие дефектов",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "удовлКл",
+          "caption": "Удовлетворенность клиента",
+          "hidden": false,
+          "index": 7
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерДокРаспр",
+          "lookupValueField": "номерДокРаспр",
+          "relationName": "ДокумРаспр",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "ДокумРаспр.ДокумПоставки",
+              "belongsTo": [
+                {
+                  "lookupValue": null,
+                  "lookupValueField": null,
+                  "relationName": "ДокумРаспр.ДокумПоставки.Клиенты",
+                  "belongsTo": [],
+                  "hidden": false,
+                  "attrs": [
+                    {
+                      "name": "заказчик",
+                      "caption": "Заказчик",
+                      "hidden": false,
+                      "index": 2
+                    },
+                    {
+                      "name": "телефон",
+                      "caption": "Телефон",
+                      "hidden": false,
+                      "index": 3
+                    },
+                    {
+                      "name": "адресПоставки",
+                      "caption": "Адрес поставки",
+                      "hidden": false,
+                      "index": 4
+                    }
+                  ],
+                  "index": -1,
+                  "type": null,
+                  "caption": "",
+                  "name": "клиенты",
+                  "relatedTo": "i-i-s-pr-клиенты",
+                  "inverse": null
+                }
+              ],
+              "hidden": false,
+              "attrs": [],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "докумПоставки",
+              "relatedTo": "i-i-s-pr-докум-поставки",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [],
+          "index": 1,
+          "type": "standard",
+          "caption": "Документа распределения",
+          "name": "докумРаспр",
+          "relatedTo": "i-i-s-pr-докум-распр",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ДокумРезПостL",
+      "modelName": "i-i-s-pr-докум-рез-пост",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "статусЗаказа",
+          "caption": "Статус заказа",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "наличиеДеф",
+          "caption": "Наличие дефектов",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "удовлКл",
+          "caption": "Удовлетворенность клиента",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ДокумРаспр",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерДокРаспр",
+              "caption": "Номер документа распределения",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер документа распределения",
+          "name": "докумРаспр",
+          "relatedTo": "i-i-s-pr-докум-распр",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

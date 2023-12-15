@@ -1,0 +1,109 @@
+﻿{
+  "applicationCaption": "Логистика",
+  "applicationTitle": "Logistika1",
+  "items": [
+    {
+      "link": null,
+      "menuName": "логистика",
+      "caption": "Логистика",
+      "title": "Логистика",
+      "children": [
+        {
+          "link": null,
+          "menuName": "номенклатура",
+          "caption": "Номенклатура",
+          "title": "Номенклатура",
+          "children": [
+            {
+              "link": "i-i-s-pr-товары-l",
+              "menuName": null,
+              "caption": "Товары",
+              "title": "Товары",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "информация-об-организации",
+          "caption": "Информация об организации",
+          "title": "Информация об организации",
+          "children": [
+            {
+              "link": "i-i-s-pr-организация-l",
+              "menuName": null,
+              "caption": "Организация",
+              "title": "Организация",
+              "children": null
+            },
+            {
+              "link": "i-i-s-pr-клиенты-l",
+              "menuName": null,
+              "caption": "Клиенты",
+              "title": "Клиенты",
+              "children": null
+            },
+            {
+              "link": "i-i-s-pr-список-контей-l",
+              "menuName": null,
+              "caption": "Список контейнеров",
+              "title": "Список контей",
+              "children": null
+            },
+            {
+              "link": "i-i-s-pr-пункт-погрузки-l",
+              "menuName": null,
+              "caption": "Пункт погрузки",
+              "title": "Пункт погрузки",
+              "children": null
+            },
+            {
+              "link": "i-i-s-pr-список-барж-l",
+              "menuName": null,
+              "caption": "Список барж",
+              "title": "Список барж",
+              "children": null
+            },
+            {
+              "link": "i-i-s-pr-сотрудники-l",
+              "menuName": null,
+              "caption": "Сотрудники",
+              "title": "Сотрудники",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "документация",
+          "caption": "Документация",
+          "title": "Документация",
+          "children": [
+            {
+              "link": "i-i-s-pr-докум-поставки-l",
+              "menuName": null,
+              "caption": "Документ поставки",
+              "title": "Докум поставки",
+              "children": null
+            },
+            {
+              "link": "i-i-s-pr-докум-распр-l",
+              "menuName": null,
+              "caption": "Документ распределения по баржам",
+              "title": "Докум распр",
+              "children": null
+            },
+            {
+              "link": "i-i-s-pr-докум-рез-пост-l",
+              "menuName": null,
+              "caption": "Документ результатов поставки",
+              "title": "Докум рез пост",
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

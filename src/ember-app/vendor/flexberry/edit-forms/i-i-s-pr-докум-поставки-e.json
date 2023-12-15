@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Клиенты",
+      "projection": "КлиентыL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Организация",
+      "projection": "ОрганизацияL",
+      "detailModelName": null
+    },
+    {
+      "master": "товары",
+      "displayAttributeName": "наимТовара",
+      "required": true,
+      "relationName": "ИнфОЗаказе.Товары",
+      "projection": "ТоварыL",
+      "detailModelName": "i-i-s-pr-инф-о-заказе"
+    }
+  ],
+  "external": false,
+  "caption": "Документ поставки",
+  "name": "IISPrДокумПоставкиE",
+  "className": "ДокумПоставкиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-докум-поставки",
+      "modelProjection": "ДокумПоставкиE"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pr-докум-распр-e",
+  "editForm": "i-i-s-pr-докум-распр-e",
+  "external": false,
+  "caption": "Документ распределения",
+  "name": "IISPrДокумРаспрL",
+  "className": "ДокумРаспрL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-докум-распр",
+      "modelProjection": "ДокумРаспрL"
+    }
+  ]
+}

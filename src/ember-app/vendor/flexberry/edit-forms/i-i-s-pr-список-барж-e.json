@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Список барж",
+  "name": "IISPrСписокБаржE",
+  "className": "СписокБаржE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-список-барж",
+      "modelProjection": "СписокБаржE"
+    }
+  ]
+}

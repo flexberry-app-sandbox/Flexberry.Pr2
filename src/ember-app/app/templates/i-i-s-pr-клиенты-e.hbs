@@ -1,0 +1,67 @@
+<h3 class="ui header">{{t "forms.i-i-s-pr-клиенты-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.заказчик
+      class=(if (v-get validationModel "заказчик" "isInvalid") "error")
+      label=(t "forms.i-i-s-pr-клиенты-e.заказчик-caption")
+      data-test-i-i-s-pr-клиенты-e-заказчик=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "заказчик" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.телефон
+      class=(if (v-get validationModel "телефон" "isInvalid") "error")
+      label=(t "forms.i-i-s-pr-клиенты-e.телефон-caption")
+      data-test-i-i-s-pr-клиенты-e-телефон=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "телефон" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.адресПоставки
+      class=(if (v-get validationModel "адресПоставки" "isInvalid") "error")
+      label=(t "forms.i-i-s-pr-клиенты-e.адресПоставки-caption")
+      data-test-i-i-s-pr-клиенты-e-адресПоставки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "адресПоставки" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.расчетСчет
+      class=(if (v-get validationModel "расчетСчет" "isInvalid") "error")
+      label=(t "forms.i-i-s-pr-клиенты-e.расчетСчет-caption")
+      data-test-i-i-s-pr-клиенты-e-расчетСчет=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "расчетСчет" "message")}}
+  </div>
+</form>

@@ -1,0 +1,116 @@
+<h3 class="ui header">{{t "forms.i-i-s-pr-докум-рез-пост-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-pr-докум-рез-пост-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-pr-докум-рез-пост-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-pr-докум-рез-пост-e.докумРаспр-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.докумРаспр
+      displayAttributeName="номерДокРаспр"
+      autocomplete=true
+      relationName="докумРаспр"
+      projection="ДокумРаспрL"
+      title=(t "forms.i-i-s-pr-докум-рез-пост-e.докумРаспр-caption")
+      readonly=readonly
+      componentName="докумРаспрLookup"
+      class=(if (v-get validationModel "докумРаспр" "isInvalid") "error")
+      data-test-i-i-s-pr-докум-рез-пост-e-докумРаспр=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "докумРаспр" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.докумРаспр.докумПоставки.клиенты.заказчик
+      class=(if (v-get validationModel.докумРаспр.докумПоставки.клиенты "заказчик" "isInvalid") "error")
+      label=(t "forms.i-i-s-pr-докум-рез-пост-e.докумРаспр.докумПоставки.клиенты.заказчик-caption")
+      data-test-i-i-s-pr-докум-рез-пост-e-докумРаспр-докумПоставки-клиенты-заказчик=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.докумРаспр.докумПоставки.клиенты "заказчик" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.докумРаспр.докумПоставки.клиенты.телефон
+      class=(if (v-get validationModel.докумРаспр.докумПоставки.клиенты "телефон" "isInvalid") "error")
+      label=(t "forms.i-i-s-pr-докум-рез-пост-e.докумРаспр.докумПоставки.клиенты.телефон-caption")
+      data-test-i-i-s-pr-докум-рез-пост-e-докумРаспр-докумПоставки-клиенты-телефон=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.докумРаспр.докумПоставки.клиенты "телефон" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.докумРаспр.докумПоставки.клиенты.адресПоставки
+      class=(if (v-get validationModel.докумРаспр.докумПоставки.клиенты "адресПоставки" "isInvalid") "error")
+      label=(t "forms.i-i-s-pr-докум-рез-пост-e.докумРаспр.докумПоставки.клиенты.адресПоставки-caption")
+      data-test-i-i-s-pr-докум-рез-пост-e-докумРаспр-докумПоставки-клиенты-адресПоставки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.докумРаспр.докумПоставки.клиенты "адресПоставки" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-pr-докум-рез-пост-e-статусЗаказа="true">
+    <label>{{t "forms.i-i-s-pr-докум-рез-пост-e.статусЗаказа-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-pr-состоян-заказа")
+      value=model.статусЗаказа
+      class=(if (v-get validationModel "статусЗаказа" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "статусЗаказа" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-pr-докум-рез-пост-e.наличиеДеф-caption"}}</label>
+    {{flexberry-checkbox
+      readonly=readonly
+      value=model.наличиеДеф
+      class=(if (v-get validationModel "наличиеДеф" "isInvalid") "error")
+      data-test-i-i-s-pr-докум-рез-пост-e-наличиеДеф=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "наличиеДеф" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-pr-докум-рез-пост-e-удовлКл="true">
+    <label>{{t "forms.i-i-s-pr-докум-рез-пост-e.удовлКл-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-pr-уд-кл")
+      value=model.удовлКл
+      class=(if (v-get validationModel "удовлКл" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "удовлКл" "message")}}
+  </div>
+</form>

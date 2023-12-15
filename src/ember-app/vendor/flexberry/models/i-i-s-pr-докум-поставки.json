@@ -1,0 +1,202 @@
+﻿{
+  "name": "IISPrДокумПоставки",
+  "modelName": "i-i-s-pr-докум-поставки",
+  "className": "ДокумПоставки",
+  "nameSpace": "IIS.Pr",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номДокПостав",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиенты",
+      "relatedTo": "i-i-s-pr-клиенты",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "организация",
+      "relatedTo": "i-i-s-pr-организация",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "инфОЗаказе",
+      "relatedTo": "i-i-s-pr-инф-о-заказе",
+      "inverse": "докумПоставки"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ДокумПоставкиE",
+      "modelName": "i-i-s-pr-докум-поставки",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "номДокПостав",
+          "caption": "Номер документа поставки",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Заказчик",
+          "lookupValueField": "заказчик",
+          "relationName": "Клиенты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "заказчик",
+              "caption": "Заказчик",
+              "hidden": true,
+              "index": 3
+            },
+            {
+              "name": "телефон",
+              "caption": "Телефон",
+              "hidden": false,
+              "index": 4
+            },
+            {
+              "name": "адресПоставки",
+              "caption": "Адрес поставки",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Заказчик",
+          "name": "клиенты",
+          "relatedTo": "i-i-s-pr-клиенты",
+          "inverse": null
+        },
+        {
+          "lookupValue": "НаимОрганиз",
+          "lookupValueField": "наимОрганиз",
+          "relationName": "Организация",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наимОрганиз",
+              "caption": "Наименование организации",
+              "hidden": true,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "type": "standard",
+          "caption": "Наименование организации",
+          "name": "организация",
+          "relatedTo": "i-i-s-pr-организация",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ИнфОЗаказеE",
+          "caption": "Информация о заказе",
+          "name": "инфОЗаказе",
+          "relatedTo": "i-i-s-pr-инф-о-заказе",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ДокумПоставкиL",
+      "modelName": "i-i-s-pr-докум-поставки",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "номДокПостав",
+          "caption": "Номер документа поставки",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Клиенты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "заказчик",
+              "caption": "Заказчик",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Заказчик",
+          "name": "клиенты",
+          "relatedTo": "i-i-s-pr-клиенты",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Организация",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наимОрганиз",
+              "caption": "Наименование организации",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименование организации",
+          "name": "организация",
+          "relatedTo": "i-i-s-pr-организация",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

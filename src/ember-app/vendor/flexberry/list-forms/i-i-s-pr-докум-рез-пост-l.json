@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pr-докум-рез-пост-e",
+  "editForm": "i-i-s-pr-докум-рез-пост-e",
+  "external": false,
+  "caption": "Документ результатов поставки",
+  "name": "IISPrДокумРезПостL",
+  "className": "ДокумРезПостL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-докум-рез-пост",
+      "modelProjection": "ДокумРезПостL"
+    }
+  ]
+}

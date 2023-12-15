@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pr-список-контей-e",
+  "editForm": "i-i-s-pr-список-контей-e",
+  "external": false,
+  "caption": "Список контейнеров",
+  "name": "IISPrСписокКонтейL",
+  "className": "СписокКонтейL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-список-контей",
+      "modelProjection": "СписокКонтейL"
+    }
+  ]
+}

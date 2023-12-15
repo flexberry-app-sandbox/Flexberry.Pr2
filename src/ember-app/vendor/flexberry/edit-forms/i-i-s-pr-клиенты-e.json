@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Клиенты",
+  "name": "IISPrКлиентыE",
+  "className": "КлиентыE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-клиенты",
+      "modelProjection": "КлиентыE"
+    }
+  ]
+}

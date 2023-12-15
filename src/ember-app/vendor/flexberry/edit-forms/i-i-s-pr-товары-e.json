@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Товары",
+  "name": "IISPrТоварыE",
+  "className": "ТоварыE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-товары",
+      "modelProjection": "ТоварыE"
+    }
+  ]
+}

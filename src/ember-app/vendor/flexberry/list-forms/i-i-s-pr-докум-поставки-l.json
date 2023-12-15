@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pr-докум-поставки-e",
+  "editForm": "i-i-s-pr-докум-поставки-e",
+  "external": false,
+  "caption": "Документ поставки",
+  "name": "IISPrДокумПоставкиL",
+  "className": "ДокумПоставкиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pr-докум-поставки",
+      "modelProjection": "ДокумПоставкиL"
+    }
+  ]
+}

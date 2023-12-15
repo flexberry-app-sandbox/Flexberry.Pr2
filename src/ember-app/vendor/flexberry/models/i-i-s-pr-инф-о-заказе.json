@@ -1,0 +1,89 @@
+﻿{
+  "name": "IISPrИнфОЗаказе",
+  "modelName": "i-i-s-pr-инф-о-заказе",
+  "className": "ИнфОЗаказе",
+  "nameSpace": "IIS.Pr",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "товары",
+      "relatedTo": "i-i-s-pr-товары",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "докумПоставки",
+      "relatedTo": "i-i-s-pr-докум-поставки",
+      "inverse": "инфОЗаказе"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ИнфОЗаказеE",
+      "modelName": "i-i-s-pr-инф-о-заказе",
+      "attrs": [
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НаимТовара",
+          "lookupValueField": "наимТовара",
+          "relationName": "Товары",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наимТовара",
+              "caption": "Наименование товара",
+              "hidden": true,
+              "index": 1
+            },
+            {
+              "name": "единицыИзмер",
+              "caption": "Единицы измерения",
+              "hidden": false,
+              "index": 3
+            },
+            {
+              "name": "цена",
+              "caption": "Цена",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Наименование товара",
+          "name": "товары",
+          "relatedTo": "i-i-s-pr-товары",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

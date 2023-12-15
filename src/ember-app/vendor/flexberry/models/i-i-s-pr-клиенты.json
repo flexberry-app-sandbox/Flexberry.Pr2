@@ -1,0 +1,117 @@
+﻿{
+  "name": "IISPrКлиенты",
+  "modelName": "i-i-s-pr-клиенты",
+  "className": "Клиенты",
+  "nameSpace": "IIS.Pr",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "адресПоставки",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "заказчик",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "расчетСчет",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "телефон",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "КлиентыE",
+      "modelName": "i-i-s-pr-клиенты",
+      "attrs": [
+        {
+          "name": "заказчик",
+          "caption": "Заказчик",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "телефон",
+          "caption": "Телефон",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "адресПоставки",
+          "caption": "Адрес поставки",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "расчетСчет",
+          "caption": "Расчетный счет",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "КлиентыL",
+      "modelName": "i-i-s-pr-клиенты",
+      "attrs": [
+        {
+          "name": "заказчик",
+          "caption": "Заказчик",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "телефон",
+          "caption": "Телефон",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "адресПоставки",
+          "caption": "Адрес поставки",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "расчетСчет",
+          "caption": "Расчетный счет",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

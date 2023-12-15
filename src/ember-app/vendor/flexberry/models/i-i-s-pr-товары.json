@@ -1,0 +1,138 @@
+﻿{
+  "name": "IISPrТовары",
+  "modelName": "i-i-s-pr-товары",
+  "className": "Товары",
+  "nameSpace": "IIS.Pr",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "единицыИзмер",
+      "type": "i-i-s-pr-ед-изм",
+      "flexberryType": "ЕдИзм",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "масса",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наимТовара",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "производитель",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "цена",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТоварыE",
+      "modelName": "i-i-s-pr-товары",
+      "attrs": [
+        {
+          "name": "наимТовара",
+          "caption": "Наименование товара",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "производитель",
+          "caption": "Производитель",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "единицыИзмер",
+          "caption": "Единицы измерения",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "масса",
+          "caption": "Масса",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ТоварыL",
+      "modelName": "i-i-s-pr-товары",
+      "attrs": [
+        {
+          "name": "наимТовара",
+          "caption": "Наименование товара",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "производитель",
+          "caption": "Производитель",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "единицыИзмер",
+          "caption": "Единицы измерения",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "масса",
+          "caption": "Масса",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

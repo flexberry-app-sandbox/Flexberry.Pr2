@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISPrСписокБарж",
+  "modelName": "i-i-s-pr-список-барж",
+  "className": "СписокБарж",
+  "nameSpace": "IIS.Pr",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номерБаржи",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "производитель",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СписокБаржE",
+      "modelName": "i-i-s-pr-список-барж",
+      "attrs": [
+        {
+          "name": "номерБаржи",
+          "caption": "Номер баржи",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "производитель",
+          "caption": "Производитель",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "СписокБаржL",
+      "modelName": "i-i-s-pr-список-барж",
+      "attrs": [
+        {
+          "name": "номерБаржи",
+          "caption": "Номер баржи",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "производитель",
+          "caption": "Производитель",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
