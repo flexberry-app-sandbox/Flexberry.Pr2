@@ -60,7 +60,10 @@ export let defineProjections = function (modelClass) {
       адресПоставки: attr('Адрес поставки', { index: 5 })
     }, { index: 2, displayMemberPath: 'заказчик' }),
     организация: belongsTo('i-i-s-pr-организация', 'Наименование организации', {
-      наимОрганиз: attr('Наименование организации', { index: 7, hidden: true })
+      наимОрганиз: attr('Наименование организации', { index: 7, hidden: true }),
+      сотрудники: belongsTo('i-i-s-pr-сотрудники', '', {
+        фИОСотруд: attr('ФИО сотрудника', { index: 8 })
+      }, { index: -1, hidden: true })
     }, { index: 6, displayMemberPath: 'наимОрганиз' }),
     инфОЗаказе: hasMany('i-i-s-pr-инф-о-заказе', 'Информация о заказе', {
       товары: belongsTo('i-i-s-pr-товары', 'Наименование товара', {
@@ -79,7 +82,10 @@ export let defineProjections = function (modelClass) {
       заказчик: attr('Заказчик', { index: 2 })
     }, { index: -1, hidden: true }),
     организация: belongsTo('i-i-s-pr-организация', 'Наименование организации', {
-      наимОрганиз: attr('Наименование организации', { index: 3 })
+      наимОрганиз: attr('Наименование организации', { index: 3 }),
+      сотрудники: belongsTo('i-i-s-pr-сотрудники', '', {
+        фИОСотруд: attr('ФИО сотрудника', { index: 4 })
+      }, { index: -1, hidden: true })
     }, { index: -1, hidden: true })
   });
 };

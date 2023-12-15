@@ -104,7 +104,29 @@
           "lookupValue": "НаимОрганиз",
           "lookupValueField": "наимОрганиз",
           "relationName": "Организация",
-          "belongsTo": [],
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Организация.Сотрудники",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "фИОСотруд",
+                  "caption": "ФИО сотрудника",
+                  "hidden": false,
+                  "index": 8
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "сотрудники",
+              "relatedTo": "i-i-s-pr-сотрудники",
+              "inverse": null
+            }
+          ],
           "hidden": false,
           "attrs": [
             {
@@ -175,7 +197,29 @@
           "lookupValue": null,
           "lookupValueField": null,
           "relationName": "Организация",
-          "belongsTo": [],
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Организация.Сотрудники",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "фИОСотруд",
+                  "caption": "ФИО сотрудника",
+                  "hidden": false,
+                  "index": 4
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "сотрудники",
+              "relatedTo": "i-i-s-pr-сотрудники",
+              "inverse": null
+            }
+          ],
           "hidden": false,
           "attrs": [
             {

@@ -32,7 +32,7 @@ export default Controller.extend({
               link: 'i-i-s-pr-товары-l',
               caption: i18n.t('forms.application.sitemap.логистика.номенклатура.i-i-s-pr-товары-l.caption'),
               title: i18n.t('forms.application.sitemap.логистика.номенклатура.i-i-s-pr-товары-l.title'),
-              icon: 'chart bar',
+              icon: 'suitcase',
               children: null
             }]
           }, {
@@ -43,37 +43,37 @@ export default Controller.extend({
               link: 'i-i-s-pr-организация-l',
               caption: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-организация-l.caption'),
               title: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-организация-l.title'),
-              icon: 'file',
+              icon: 'book',
               children: null
             }, {
               link: 'i-i-s-pr-клиенты-l',
               caption: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-клиенты-l.caption'),
               title: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-клиенты-l.title'),
-              icon: 'tasks',
+              icon: 'chart bar',
               children: null
             }, {
               link: 'i-i-s-pr-список-контей-l',
               caption: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-список-контей-l.caption'),
               title: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-список-контей-l.title'),
-              icon: 'archive',
+              icon: 'address card',
               children: null
             }, {
               link: 'i-i-s-pr-пункт-погрузки-l',
               caption: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-пункт-погрузки-l.caption'),
               title: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-пункт-погрузки-l.title'),
-              icon: 'suitcase',
+              icon: 'table',
               children: null
             }, {
               link: 'i-i-s-pr-список-барж-l',
               caption: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-список-барж-l.caption'),
               title: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-список-барж-l.title'),
-              icon: 'chart line',
+              icon: 'tags',
               children: null
             }, {
               link: 'i-i-s-pr-сотрудники-l',
               caption: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-сотрудники-l.caption'),
               title: i18n.t('forms.application.sitemap.логистика.информация-об-организации.i-i-s-pr-сотрудники-l.title'),
-              icon: 'building',
+              icon: 'book',
               children: null
             }]
           }, {
@@ -84,19 +84,19 @@ export default Controller.extend({
               link: 'i-i-s-pr-докум-поставки-l',
               caption: i18n.t('forms.application.sitemap.логистика.документация.i-i-s-pr-докум-поставки-l.caption'),
               title: i18n.t('forms.application.sitemap.логистика.документация.i-i-s-pr-докум-поставки-l.title'),
-              icon: 'building',
+              icon: 'tasks',
               children: null
             }, {
               link: 'i-i-s-pr-докум-распр-l',
               caption: i18n.t('forms.application.sitemap.логистика.документация.i-i-s-pr-докум-распр-l.caption'),
               title: i18n.t('forms.application.sitemap.логистика.документация.i-i-s-pr-докум-распр-l.title'),
-              icon: 'briefcase',
+              icon: 'folder',
               children: null
             }, {
               link: 'i-i-s-pr-докум-рез-пост-l',
               caption: i18n.t('forms.application.sitemap.логистика.документация.i-i-s-pr-докум-рез-пост-l.caption'),
               title: i18n.t('forms.application.sitemap.логистика.документация.i-i-s-pr-докум-рез-пост-l.title'),
-              icon: 'briefcase',
+              icon: 'book',
               children: null
             }]
           }]
