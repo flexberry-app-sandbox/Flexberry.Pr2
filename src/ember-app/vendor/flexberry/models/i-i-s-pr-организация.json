@@ -38,29 +38,7 @@
           "index": 0
         }
       ],
-      "belongsTo": [
-        {
-          "lookupValue": "ФИОСотруд",
-          "lookupValueField": "фИОСотруд",
-          "relationName": "Сотрудники",
-          "belongsTo": [],
-          "hidden": true,
-          "attrs": [
-            {
-              "name": "фИОСотруд",
-              "caption": "ФИО сотрудника",
-              "hidden": true,
-              "index": 2
-            }
-          ],
-          "index": 1,
-          "type": "standard",
-          "caption": "ФИО сотрудника",
-          "name": "сотрудники",
-          "relatedTo": "i-i-s-pr-сотрудники",
-          "inverse": null
-        }
-      ],
+      "belongsTo": [],
       "hasMany": []
     },
     {
@@ -74,29 +52,7 @@
           "index": 0
         }
       ],
-      "belongsTo": [
-        {
-          "lookupValue": null,
-          "lookupValueField": null,
-          "relationName": "Сотрудники",
-          "belongsTo": [],
-          "hidden": true,
-          "attrs": [
-            {
-              "name": "фИОСотруд",
-              "caption": "ФИО сотрудника",
-              "hidden": true,
-              "index": 1
-            }
-          ],
-          "index": -1,
-          "type": "default",
-          "caption": "ФИО сотрудника",
-          "name": "сотрудники",
-          "relatedTo": "i-i-s-pr-сотрудники",
-          "inverse": null
-        }
-      ],
+      "belongsTo": [],
       "hasMany": []
     }
   ],

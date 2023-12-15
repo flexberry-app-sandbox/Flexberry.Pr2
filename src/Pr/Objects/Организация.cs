@@ -29,16 +29,9 @@ namespace IIS.Pr
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ОрганизацияE", new string[] {
-            "НаимОрганиз as \'Наименование организации\'",
-            "Сотрудники as \'ФИО сотрудника\'",
-            "Сотрудники.ФИОСотруд as \'ФИО сотрудника\'"}, Hidden=new string[] {
-            "Сотрудники",
-            "Сотрудники.ФИОСотруд"})]
-    [MasterViewDefineAttribute("ОрганизацияE", "Сотрудники", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "ФИОСотруд")]
+            "НаимОрганиз as \'Наименование организации\'"})]
     [View("ОрганизацияL", new string[] {
-            "НаимОрганиз as \'Наименование организации\'",
-            "Сотрудники.ФИОСотруд as \'ФИО сотрудника\'"}, Hidden=new string[] {
-            "Сотрудники.ФИОСотруд"})]
+            "НаимОрганиз as \'Наименование организации\'"})]
     public class Организация : ICSSoft.STORMNET.DataObject
     {
         
